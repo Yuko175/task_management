@@ -14,8 +14,7 @@ class TodoApp(UserControl):
     def build(self):
         self.new_task = TextField(hint_text="タスクを入力してください", expand=True)
         self.tasks = Column()
-
-        return Column(
+        self.task_view = Column(
             width=600,
             controls=[
                 Row(
@@ -27,6 +26,8 @@ class TodoApp(UserControl):
                 self.tasks,
             ],
         )
+
+        return self.task_view
 
     def add_clicked(self, e):
         task = Task(self.new_task.value, self.task_delete)

@@ -69,8 +69,6 @@ class Task(UserControl):
 
     def add_clicked(self, e):
         self.edit_name.value = self.display_task.label
-        self.display_view.visible = False
-        self.edit_view.visible = False
         self.update()
 
     def edit_clicked(self, e):
